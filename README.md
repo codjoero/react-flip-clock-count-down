@@ -16,7 +16,7 @@ Examples
 ### Using webpack
 
 ```js
-import Clock from "react-flip-clock";
+import Clock from "react-flip-clock-en";
 
 const Index = () => {
   return (
