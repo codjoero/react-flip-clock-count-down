@@ -8,7 +8,7 @@ https://github.com/xiaxiangfeng/react-flip-clock
 ## Installation
 
 ```npm
-npm i react-flip-clock
+npm i react-flip-clock-en
 ```
 
 Examples
