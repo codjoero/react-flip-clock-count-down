@@ -1,48 +1,46 @@
-# react 翻页时钟计时器
+# react flip clock timer (English)
 
-> 基于react开发的一个翻页动画效果非常漂亮的计时器。
-预览地址：http://xiaxiangfeng.github.io/flip-clock/index.html
+Based on the chinese version:
+http://xiaxiangfeng.github.io/flip-clock/index.html
+https://www.npmjs.com/package/react-flip-clock
+https://github.com/xiaxiangfeng/react-flip-clock
 
+## Installation
 
-## 从NPM下载包
-
-``` npm
+```npm
 npm i react-flip-clock
 ```
 
-## 使用实例
+Examples
 
-### 引入包
+### Using webpack
 
-``` js
-import Clock from 'react-flip-clock'
+```js
+import Clock from "react-flip-clock";
 
 const Index = () => {
   return (
     <div>
       <Clock />
     </div>
-  )
-}
+  );
+};
 
-render(
-  <Index />,
-  document.getElementById('app')
-)
+render(<Index />, document.getElementById("app"));
 ```
 
-### 自定义样式
+### Custom Styles
 
-#### 编写样式覆盖即可
+#### You can override this
 
-``` css
-/*宽高*/
+```css
+/*Width and Height*/
 .flip-clock-wrapper ul {
   width: 60px;
   height: 90px;
 }
 
-/*背景颜色、字体大小*/
+/*Background colours*/
 .flip-clock-wrapper .inn {
   background-color: #502d2d;
   font-size: 70px;
@@ -51,7 +49,7 @@ render(
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 

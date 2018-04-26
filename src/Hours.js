@@ -1,20 +1,18 @@
-import React from 'react'
-import NumEl from './num-el'
+import React from "react";
+import NumEl from "./num-el";
 
 export default class Hours extends React.Component {
-  render () {
+  render() {
     return (
       <div>
-        <div className="title">
-          小时
-        </div>
-        <NumEl type='hours-pre' num='2' />
-        <NumEl type='hours-last' num='4' />
+        <div className="title">Hours</div>
+        <NumEl type="hours-pre" num="2" />
+        <NumEl type="hours-last" num="4" />
         <div className="semicolon">
-          <span></span>
-          <span></span>
+          <span />
+          <span />
         </div>
       </div>
-    )
+    );
   }
 }
