@@ -2,7 +2,7 @@
   "name": "react-flip-clock-count-down",
   "url": "https://github.com/codjoero/react-flip-clock-count-down",
   "email": "angeloperera@gmail.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react flip clock count down, takes Timestamp in milliseconds",
   "author": "Codjoe Ronnie",
   "private": false,
