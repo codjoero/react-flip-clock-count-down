@@ -1,4 +1,4 @@
-# react flip clock timer (English)
+# react flip clock timer (Count down)
 
 Based on the chinese version:
 http://xiaxiangfeng.github.io/flip-clock/index.html
@@ -8,7 +8,7 @@ https://github.com/xiaxiangfeng/react-flip-clock
 ## Installation
 
 ```npm
-npm i react-flip-clock-en
+npm i react-flip-clock-count-down
 ```
 
 Examples
@@ -16,12 +16,12 @@ Examples
 ### Using webpack
 
 ```js
-import Clock from "react-flip-clock-en";
+import Clock from "react-flip-clock-count-down";
 
 const Index = () => {
   return (
     <div>
-      <Clock />
+      <Clock endTime={1618237200000} />
     </div>
   );
 };

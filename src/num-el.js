@@ -3,7 +3,7 @@ import React from 'react'
 export default ({ type, num = 1 }) => {
   const li = []
 
-  for (var i = 0; i < num; ++i) {
+  for (var i = num; i >= 0; --i) {
     li.push(
       <li key={i}>
         <a href="#" className="">

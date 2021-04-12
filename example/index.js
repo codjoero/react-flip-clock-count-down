@@ -6,7 +6,9 @@ import Clock from '../lib/index.js'
 const Index = () => {
   return (
     <div>
-      <Clock />
+      <Clock
+        endTime={1618237200000}
+      />
     </div>
   )
 }

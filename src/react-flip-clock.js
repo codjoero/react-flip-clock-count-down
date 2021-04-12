@@ -5,18 +5,49 @@ import Hours from './hours'
 import '@/index.scss'
 
 export default class FilpClock extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = { hours: 0 }
+  }
+
   $$ (str) {
     return document.querySelectorAll(str)
   }
 
   componentDidMount () {
     this.flip()
+
+    const { endTime } = this.props
+    this.getTimeRemaining(endTime)
   }
 
   flip () {
     setInterval(() => {
       this.secondsLastMove()
     }, 1000)
+  }
+
+  getTimeRemaining (endTime) {
+    const total = endTime - Date.parse(new Date())
+    const hrs = Math.floor((total / (1000 * 60 * 60)) % 24)
+
+    this.setState({
+      hours: this.truncNum(hrs)
+    })
+    return { hrs }
+  }
+
+  truncNum (num) {
+    const strNum = num.toString()
+    let pre = 0
+    let last = 0
+    if (strNum.length === 2) {
+      pre = Number(strNum.charAt(0))
+      last = Number(strNum.charAt(1))
+    } else {
+      last = Number(strNum.charAt(0))
+    }
+    return { pre, last }
   }
 
   hoursPredMove = (() => {
@@ -71,11 +102,13 @@ export default class FilpClock extends React.Component {
   }
 
   render () {
+    const { hours } = this.state
+
     return (
       <div className="flip-clock-wrapper">
-        <Hours/>
-        <Minutes/>
-        <Seconds/>
+        <Hours hours={hours}/>
+        <Minutes />
+        <Seconds />
       </div>
     )
   }
